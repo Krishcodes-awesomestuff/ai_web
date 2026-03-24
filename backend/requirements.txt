@@ -1,0 +1,14 @@
+fastapi
+uvicorn
+sqlalchemy
+python-dotenv
+openai
+sentence-transformers
+faiss-cpu
+scikit-surprise
+pandas
+numpy
+pydantic
+passlib[bcrypt]
+python-multipart
+jose

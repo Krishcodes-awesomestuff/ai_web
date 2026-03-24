@@ -1,0 +1,245 @@
+﻿python : Traceback 
+(most recent call 
+last):
+At line:1 char:22
++ $env:PYTHONPATH="."; 
+python app/db/seed.py 
+2>&1 | Out-File 
+-FilePath  ...
++                      
+~~~~~~~~~~~~~~~~~~~~~~~
+~~~
+    + CategoryInfo     
+         : NotSpecifi  
+  ed: (Traceback (mo   
+ st recent call las    
+t)::String) [], Re    
+moteException
+    + FullyQualifiedEr 
+   rorId : NativeComm  
+  andError
+ 
+  File "C:\Users\Sherly
+.K\AppData\Local\Progra
+ms\Python\Python311\Lib
+\site-packages\sqlalche
+my\engine\base.py", 
+line 1967, in 
+_exec_single_context
+    self.dialect.do_exe
+cute(
+  File "C:\Users\Sherly
+.K\AppData\Local\Progra
+ms\Python\Python311\Lib
+\site-packages\sqlalche
+my\engine\default.py", 
+line 952, in do_execute
+    cursor.execute(stat
+ement, parameters)
+sqlite3.OperationalErro
+r: no such column: 
+products.description
+
+The above exception 
+was the direct cause 
+of the following 
+exception:
+
+Traceback (most recent 
+call last):
+  File 
+"D:\SHERLY\Sherly\PROJ 
+IDEAS\ai 
+recommendation with pyt
+hon\ai_web\backend\app\
+db\seed.py", line 72, 
+in <module>
+    if db.query(Product
+).count() < 20000:
+       ^^^^^^^^^^^^^^^^
+^^^^^^^^^
+  File "C:\Users\Sherly
+.K\AppData\Local\Progra
+ms\Python\Python311\Lib
+\site-packages\sqlalche
+my\orm\query.py", line 
+3146, in count
+    self._legacy_from_s
+elf(col).enable_eagerlo
+ads(False).scalar()
+  File "C:\Users\Sherly
+.K\AppData\Local\Progra
+ms\Python\Python311\Lib
+\site-packages\sqlalche
+my\orm\query.py", line 
+2835, in scalar
+    ret = self.one()
+          ^^^^^^^^^^
+  File "C:\Users\Sherly
+.K\AppData\Local\Progra
+ms\Python\Python311\Lib
+\site-packages\sqlalche
+my\orm\query.py", line 
+2808, in one
+    return 
+self._iter().one()  # 
+type: ignore
+           ^^^^^^^^^^^^
+  File "C:\Users\Sherly
+.K\AppData\Local\Progra
+ms\Python\Python311\Lib
+\site-packages\sqlalche
+my\orm\query.py", line 
+2857, in _iter
+    result: Union[Scala
+rResult[_T], 
+Result[_T]] = 
+self.session.execute(
+                       
+                       
+    
+^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sherly
+.K\AppData\Local\Progra
+ms\Python\Python311\Lib
+\site-packages\sqlalche
+my\orm\session.py", 
+line 2351, in execute
+    return 
+self._execute_internal(
+           
+^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sherly
+.K\AppData\Local\Progra
+ms\Python\Python311\Lib
+\site-packages\sqlalche
+my\orm\session.py", 
+line 2249, in 
+_execute_internal
+    result: 
+Result[Any] = compile_s
+tate_cls.orm_execute_st
+atement(
+                       
+   ^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sherly
+.K\AppData\Local\Progra
+ms\Python\Python311\Lib
+\site-packages\sqlalche
+my\orm\context.py", 
+line 306, in 
+orm_execute_statement
+    result = 
+conn.execute(
+             
+^^^^^^^^^^^^^
+  File "C:\Users\Sherly
+.K\AppData\Local\Progra
+ms\Python\Python311\Lib
+\site-packages\sqlalche
+my\engine\base.py", 
+line 1419, in execute
+    return meth(
+           ^^^^^
+  File "C:\Users\Sherly
+.K\AppData\Local\Progra
+ms\Python\Python311\Lib
+\site-packages\sqlalche
+my\sql\elements.py", 
+line 527, in 
+_execute_on_connection
+    return connection._
+execute_clauseelement(
+           ^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sherly
+.K\AppData\Local\Progra
+ms\Python\Python311\Lib
+\site-packages\sqlalche
+my\engine\base.py", 
+line 1641, in 
+_execute_clauseelement
+    ret = 
+self._execute_context(
+          
+^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sherly
+.K\AppData\Local\Progra
+ms\Python\Python311\Lib
+\site-packages\sqlalche
+my\engine\base.py", 
+line 1846, in 
+_execute_context
+    return self._exec_s
+ingle_context(
+           ^^^^^^^^^^^^
+^^^^^^^^^^^^^^
+  File "C:\Users\Sherly
+.K\AppData\Local\Progra
+ms\Python\Python311\Lib
+\site-packages\sqlalche
+my\engine\base.py", 
+line 1986, in 
+_exec_single_context
+    self._handle_dbapi_
+exception(
+  File "C:\Users\Sherly
+.K\AppData\Local\Progra
+ms\Python\Python311\Lib
+\site-packages\sqlalche
+my\engine\base.py", 
+line 2363, in 
+_handle_dbapi_exception
+    raise sqlalchemy_ex
+ception.with_traceback(
+exc_info[2]) from e
+  File "C:\Users\Sherly
+.K\AppData\Local\Progra
+ms\Python\Python311\Lib
+\site-packages\sqlalche
+my\engine\base.py", 
+line 1967, in 
+_exec_single_context
+    self.dialect.do_exe
+cute(
+  File "C:\Users\Sherly
+.K\AppData\Local\Progra
+ms\Python\Python311\Lib
+\site-packages\sqlalche
+my\engine\default.py", 
+line 952, in do_execute
+    cursor.execute(stat
+ement, parameters)
+sqlalchemy.exc.Operatio
+nalError: (sqlite3.Oper
+ationalError) no such 
+column: 
+products.description
+[SQL: SELECT count(*) 
+AS count_1 
+FROM (SELECT 
+products.id AS 
+products_id, 
+products.name AS 
+products_name, 
+products.category AS 
+products_category, 
+products.brand AS 
+products_brand, 
+products.price AS 
+products_price, 
+products.rating AS 
+products_rating, 
+products.description 
+AS 
+products_description, 
+products.view_count AS 
+products_view_count, 
+products.image_url AS 
+products_image_url 
+FROM products) AS 
+anon_1]
+(Background on this 
+error at: https://sqlal
+che.me/e/20/e3q8)

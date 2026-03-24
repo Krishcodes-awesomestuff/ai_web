@@ -1,0 +1,50 @@
+.search-results-page {
+  padding: 100px 50px 50px;
+  min-height: 100vh;
+  background-color: #0d0d0d;
+  color: white;
+}
+
+.search-info {
+  margin-bottom: 30px;
+}
+
+.search-info h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  font-weight: 300;
+}
+
+.active-filters {
+  display: flex;
+  gap: 10px;
+}
+
+.filter-badge {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.filter-badge button {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.search-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.no-results {
+  font-size: 1.2rem;
+  color: #888;
+}
